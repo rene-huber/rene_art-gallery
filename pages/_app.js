@@ -6,7 +6,7 @@ import useStore from "../store"
 const fetcher = (url) => fetch(url).then((response) => response.json())
 
 export default function App({ Component, pageProps }) {
-  const { data, setData } = useStore(); 
+  const { data, setData, info, setInfo  } = useStore(); 
 
   const { data: swrData, error, isLoading } = useSWR(
     "https://example-apis.vercel.app/api/art", fetcher
