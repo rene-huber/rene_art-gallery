@@ -6,9 +6,13 @@ function Spotlight() {
     const { data } = useStore();
 
     const randomSelect = randomItem(data);
-    console.log(randomSelect)
+    // console.log(randomSelect)
 
-    return <SpotLight image={randomSelect.imageSource} />;
+    const image = randomSelect.imageSource
+    const slug = randomSelect.slug
+
+
+    return <SpotLight image={image} slug={slug} />
 }
 
 export default Spotlight;

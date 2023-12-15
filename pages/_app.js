@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
   }, [swrData, setData]);
 
 
-  console.log(data)
+  // console.log(data)
 
 
 
