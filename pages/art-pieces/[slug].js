@@ -8,16 +8,16 @@ function OneArtSelected() {
   const router = useRouter()
   const { slug } = router.query
 
-  const selectedArt = data.find((art) => art.slug === slug)
-  if (!selectedArt) return <h1>Art not found</h1>
+  const art = data.find((art) => art.slug === slug)
+  if (!art) return <h1>Art not found</h1>
 
   return (
     <ArtPieceDetails
-      image={selectedArt.imageSource}
-      artist={selectedArt.artist}
-      title={selectedArt.name}
-      year={selectedArt.year}
-      genre={selectedArt.genre}
+      image={art.imageSource}
+      artist={art.artist}
+      title={art.name}
+      year={art.year}
+      genre={art.genre}
     />
   );
 }

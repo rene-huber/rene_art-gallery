@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import GlobalStyle from "../styles";
-import { useEffect } from "react";
+import GlobalStyle from "../styles"
+import { useEffect } from "react"
 import useStore from "../store"
 
 const fetcher = (url) => fetch(url).then((response) => response.json())
@@ -14,11 +14,6 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => { if (swrData) { setData(swrData); }
   }, [swrData, setData]);
-
-
-  // console.log(data)
-
-
 
 
   if (isLoading) return <div>Loading...</div>
