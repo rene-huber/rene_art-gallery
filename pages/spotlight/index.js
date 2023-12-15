@@ -1,11 +1,11 @@
-import useStore from '@/store';
-import SpotLight from '@/components/SpotLight';
-import randomItem from '@/lib/random-Item';
+import useStore from '@/store'
+import SpotLight from '@/components/SpotLight'
+import randomItem from '@/lib/random-Item'
 
 function Spotlight() {
-    const { data } = useStore();
+    const { data } = useStore()
 
-    const randomSelect = randomItem(data);
+    const randomSelect = randomItem(data)
     // console.log(randomSelect)
 
     const image = randomSelect.imageSource
@@ -15,4 +15,4 @@ function Spotlight() {
     return <SpotLight image={image} slug={slug} />
 }
 
-export default Spotlight;
+export default Spotlight

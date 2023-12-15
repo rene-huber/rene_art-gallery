@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
-function SpotLight({ image, artist, slug }) {
+function SpotLight({ image, title, artist, year, genre }) {
   return (
     <>
       <div>
@@ -9,6 +9,12 @@ function SpotLight({ image, artist, slug }) {
           <Image src={image} width={500} height={500} alt={artist} />
      
         <h2>{artist}</h2>
+        <h2>{title}</h2>
+        <h2>{year}</h2>
+        <h2>{genre}</h2>
+
+
+        
         {/* <FavoriteButton
           artPiecesInfo={artPiecesInfo}
           onToggleFavorite={onToggleFavorite}
@@ -19,4 +25,4 @@ function SpotLight({ image, artist, slug }) {
   );
 }
 
-export default SpotLight;
+export default SpotLight
