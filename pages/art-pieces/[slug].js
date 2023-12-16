@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import useStore from "@/store"
 import ArtPieceDetails from "@/components/ArtPieceDetails"
+import Comments from "@/components/Comments/Comments"
 
 function OneArtSelected() {
   const { data } = useStore()
@@ -12,7 +13,10 @@ function OneArtSelected() {
   if (!art) return <h1>Art not found</h1>
 
   return (
-    <ArtPieceDetails
+
+    
+<>
+<ArtPieceDetails
       image={art.imageSource}
       artist={art.artist}
       title={art.name}
@@ -20,6 +24,8 @@ function OneArtSelected() {
       genre={art.genre}
       slug={art.slug}
     />
+<Comments slug={art.slug} />
+</>
   );
 }
 
