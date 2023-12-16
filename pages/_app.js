@@ -2,11 +2,12 @@ import useSWR from "swr";
 import GlobalStyle from "../styles"
 import { useEffect } from "react"
 import useStore from "../store"
+import Layout from "@/components/Layout";
 
 const fetcher = (url) => fetch(url).then((response) => response.json())
 
 export default function App({ Component, pageProps }) {
-  const { data, setData, info, setInfo  } = useStore(); 
+  const { data, setData } = useStore(); 
 
   const { data: swrData, error, isLoading } = useSWR(
     "https://example-apis.vercel.app/api/art", fetcher
@@ -22,8 +23,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+
       <GlobalStyle />
+      <Layout>
       <Component {...pageProps} />
+      </Layout>
+      
     </>
   );
 }

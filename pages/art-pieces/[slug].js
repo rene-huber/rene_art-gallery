@@ -18,6 +18,7 @@ function OneArtSelected() {
       title={art.name}
       year={art.year}
       genre={art.genre}
+      slug={art.slug}
     />
   );
 }

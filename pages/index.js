@@ -10,6 +10,7 @@ export default function HomePage() {
 <li> 
   <Link href={"/art-pieces"}>art pieces</Link> {""} <br/><br/>
   <Link href={"/spotlight"}>Spotlight</Link>
+  <Link href={"/favorites"}>fav</Link>
 
   
 </li>
