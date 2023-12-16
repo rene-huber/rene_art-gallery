@@ -1,13 +1,13 @@
 import useStore from "@/store"
 
 const FavoriteButton = ({ slug }) => {
-  const { artPiecesInfo, setArtPieceFavorite } = useStore()
+  const { artPiecesInfo, setArtPiece } = useStore()
   const isFavorited = artPiecesInfo[slug]?.isFavorite || false
 
   console.log(isFavorited,"isFavorited", slug, artPiecesInfo)
 
   const handleFavorite = () => {
-    setArtPieceFavorite(slug, !isFavorited)
+    setArtPiece(slug, !isFavorited)
   };
 
   return (

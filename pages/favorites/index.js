@@ -1,32 +1,21 @@
-import ArtPieces from "@/components/ArtPieces"
-import useStore from "@/store"
+import ArtPieces from "@/components/ArtPieces";
+import useStore from "@/store";
 
 const FavoritesPage = () => {
-  const { artPiecesInfo } = useStore()
+  const { artPiecesInfo, data } = useStore();
 
-  const favoriteArtPieces = Object.entries(artPiecesInfo).reduce(
-    (favorites, [slug, artPiece]) => {
-      if (artPiece.isFavorite) {
-        favorites.push({ ...artPiece, slug })
-      }
-      return favorites
-    },
-    []
+  // Filtrar 'data' para obtener solo las piezas de arte favoritas
+  // que tienen un 'slug' correspondiente en 'artPiecesInfo'
+  const filteredFavoriteArtPieces = data.filter(artPiece => 
+    artPiecesInfo[artPiece.slug] && artPiecesInfo[artPiece.slug].isFavorite
   );
-console.log(favoriteArtPieces,"favoriteArtPieces")
-  //   const favoriteArtPieces = Object.entries(artPiecesInfo)
-  //     .filter(([_, artPiece]) => artPiece.isFavorite)
-  //     .map(([slug, artPiece]) => ({ ...artPiece, slug }));
-
 
   return (
     <div>
       <h1>Favorite Art Pieces</h1>
-      {/* <ArtPieces pieces={favoriteArtPieces}  /> */}
-
-      <h1>{favoriteArtPieces[0].slug}</h1>
+      <ArtPieces pieces={filteredFavoriteArtPieces} />
     </div>
   );
 };
 
-export default FavoritesPage
+export default FavoritesPage;

@@ -10,7 +10,7 @@ function ArtPieces({ pieces, isFavorite }) {
             <h2>{piece.title}</h2>
             <Image
               src={piece.imageSource}
-              alt={piece.name}
+              alt={piece.slug}
               width={200}
               height={200}
             />
