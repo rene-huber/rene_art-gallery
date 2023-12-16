@@ -7,7 +7,7 @@ const useStore = create(persist(
     setData: (apiData) => set({ data: apiData }),
 
     artPiecesInfo: {},
-    setArtPieceFavorite: (slug, isFavorite) => set(state => ({
+    setArtPiece: (slug, isFavorite) => set(state => ({
       artPiecesInfo: {
         ...state.artPiecesInfo,
         [slug]: {
