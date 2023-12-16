@@ -1,8 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import FavoriteButton from "../FavoriteButton"
 
-function SpotLight({ image, title, artist, year, genre }) {
+function SpotLight({ image, title, artist, year, genre, slug }) {
+
+  const onToggleFavorite = () => {
+    console.log("onToggleFavorite")
+  }
+
+
   const router = useRouter()
   return (
     <>
@@ -17,6 +24,8 @@ function SpotLight({ image, title, artist, year, genre }) {
 
 <button onClick={()=> {router.back()}}>Back</button>
         
+        <FavoriteButton slug={slug} />
+
         {/* <FavoriteButton
           artPiecesInfo={artPiecesInfo}
           onToggleFavorite={onToggleFavorite}

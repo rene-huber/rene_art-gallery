@@ -1,11 +1,26 @@
-import {create} from 'zustand'
+import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
 
-const useStore = create(set => ({
-  data: null,
-  setData: (apiData) => set({ data: apiData }),
+const useStore = create(persist(
+  (set) => ({
+    data: null,
+    setData: (apiData) => set({ data: apiData }),
 
-  artPieceInfo: null,
-  setInfo: (artPieceInfo) => set({ info: artPieceInfo }),
-}));
+    artPiecesInfo: {},
+    setArtPieceFavorite: (slug, isFavorite) => set(state => ({
+      artPiecesInfo: {
+        ...state.artPiecesInfo,
+        [slug]: {
+          ...state.artPiecesInfo[slug],
+          isFavorite
+        }
+      }
+    })),
+  }),
+  {
+    name: 'favorites-art-selected', 
+    getStorage: () => localStorage, 
+  }
+));
 
 export default useStore;
