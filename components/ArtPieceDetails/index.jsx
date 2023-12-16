@@ -26,11 +26,6 @@ function SpotLight({ image, title, artist, year, genre, slug }) {
         
         <FavoriteButton slug={slug} />
 
-        {/* <FavoriteButton
-          artPiecesInfo={artPiecesInfo}
-          onToggleFavorite={onToggleFavorite}
-          slug={slug}
-        ></FavoriteButton> */}
       </div>
     </>
   );

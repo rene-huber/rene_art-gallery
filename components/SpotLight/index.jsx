@@ -14,13 +14,8 @@ function SpotLight({ image, artist, slug }) {
         <h2>{artist}</h2>
         <button onClick={()=> {router.back()}}>Back</button>
 
-    <FavoriteButton />
+    <FavoriteButton slug={slug} />
     
-        {/* <FavoriteButton
-          artPiecesInfo={artPiecesInfo}
-          onToggleFavorite={onToggleFavorite}
-          slug={slug}
-        ></FavoriteButton> */}
       </div>
     </>
   );
