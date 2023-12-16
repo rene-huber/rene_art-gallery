@@ -12,8 +12,8 @@ const useStore = create(persist(
         ...state.artPiecesInfo,
         [slug]: {
           ...state.artPiecesInfo[slug],
-          isFavorite
-        }
+          isFavorite,
+          }
       }
     })),
   }),
