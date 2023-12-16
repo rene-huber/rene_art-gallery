@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
   <>
   <header>
-    <h1>Art Galerry</h1>
+  
     <Navigation />
   </header>
 

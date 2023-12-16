@@ -3,7 +3,11 @@ import Link from "next/link"
 function Navigation() {
   return (
     <nav>
+          <h1>Art Galerry</h1>
          <ul>
+      <li>
+        <Link href="/">Home</Link>
+      </li>
       <li>
         <Link href="/spotlight">Spotlight</Link>
       </li>
