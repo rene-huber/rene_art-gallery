@@ -1,6 +1,6 @@
 import useStore from "@/store"
-import heart from "./heart.svg"
-import Image from 'next/image';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const FavoriteButton = ({ slug }) => {
   const { artPiecesInfo, setArtPiece } = useStore()
@@ -15,13 +15,11 @@ const FavoriteButton = ({ slug }) => {
 
   return (
    <>
- <div>
-        <Image src={heart} alt="fav" height={21} width={21} />
-      </div>
+ 
    
     <button onClick={handleFavorite}>
      
-      {isFavorited ?  'fav' : 'no fav'}
+      {isFavorited ?   <FavoriteIcon /> :  <FavoriteBorderIcon /> }
     </button>
    </>
   );
