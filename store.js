@@ -26,7 +26,7 @@ const useStore = create(persist(
     }),
 
 addComment: (slug, newComment) => set(state => {
-      const artPiece = state.artPiecesInfo[slug] || { comments: [] }; // Asegurarse de que artPiece tiene un campo comments
+      const artPiece = state.artPiecesInfo[slug] || { comments: [] }; 
       const updatedComments = artPiece.comments ? [...artPiece.comments, newComment] : [newComment];
 
       return {
