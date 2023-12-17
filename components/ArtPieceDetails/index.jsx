@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
 import FavoriteButton from "../FavoriteButton"
-import CommentForm from "../CommentForm/CommentForm"
+import CommentForm from "../CommentForm";
+
 
 function SpotLight({ image, title, artist, year, genre, slug }) {
   const router = useRouter()

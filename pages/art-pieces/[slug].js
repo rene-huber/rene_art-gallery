@@ -1,7 +1,8 @@
 import { useRouter } from "next/router"
 import useStore from "@/store"
 import ArtPieceDetails from "@/components/ArtPieceDetails"
-import Comments from "@/components/Comments/Comments"
+import Comments from "@/components/Comments"
+
 
 function OneArtSelected() {
   const { data } = useStore()
