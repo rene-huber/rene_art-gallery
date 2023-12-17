@@ -25,9 +25,9 @@ const useStore = create(persist(
       }
     }),
 
-    addComment: (slug, newComment) => set(state => {
-      const artPiece = state.artPiecesInfo[slug] || { comments: [] };
-      const updatedComments = [...artPiece.comments, newComment];
+addComment: (slug, newComment) => set(state => {
+      const artPiece = state.artPiecesInfo[slug] || { comments: [] }; 
+      const updatedComments = artPiece.comments ? [...artPiece.comments, newComment] : [newComment];
 
       return {
         artPiecesInfo: {
@@ -46,4 +46,4 @@ const useStore = create(persist(
   }
 ));
 
-export default useStore
+export default useStore;
