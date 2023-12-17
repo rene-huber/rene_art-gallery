@@ -4,7 +4,7 @@ import FavoriteButton from "../FavoriteButton"
 import CommentForm from "../CommentForm";
 
 
-function SpotLight({ image, title, artist, year, genre, slug }) {
+function ArtPieceDetail({ image, title, artist, year, genre, slug }) {
   const router = useRouter()
   return (
     <>
@@ -25,4 +25,4 @@ function SpotLight({ image, title, artist, year, genre, slug }) {
   );
 }
 
-export default SpotLight
+export default ArtPieceDetail

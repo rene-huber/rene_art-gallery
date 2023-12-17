@@ -9,14 +9,14 @@ function SpotLight({ image, artist, slug }) {
     <>
       <div>
         <Link href={`/art-pieces/${slug}`}>
-          <Image src={image} width={500} height={500} alt={artist} />
+          <Image src={image} width={500} height={500} alt={slug} />
         </Link>
         <h2>{artist}</h2>
         <button onClick={()=> {router.back()}}>Back</button>
 
-    <FavoriteButton slug={slug} />
     
       </div>
+        {/* <FavoriteButton slug={slug} /> */}
     </>
   );
 }
