@@ -3,11 +3,11 @@ import { persist } from 'zustand/middleware'
 
 const useStore = create(persist(
   (set) => ({
+
     data: null,
     setData: (apiData) => set({ data: apiData }),
 
-    artPiecesInfo: {},
-    
+    artPiecesInfo: {},    
     setArtPiece: (slug, artPieceData) => set(state => {
       const currentArtPiece = state.artPiecesInfo[slug] || { comments: [], isFavorite: false }
 
