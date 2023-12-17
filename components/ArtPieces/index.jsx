@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import FavoriteButton from "@/components/FavoriteButton"
 
 function ArtPieces({ pieces, isFavorite }) {
   return (
@@ -16,6 +17,7 @@ function ArtPieces({ pieces, isFavorite }) {
             />
             <p>{piece.artist}</p>
           </Link>
+          <FavoriteButton slug={piece.slug} isFavorite={isFavorite} />
         </li>
       ))}
     </ul>
