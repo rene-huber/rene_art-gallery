@@ -15,8 +15,6 @@ function OneArtSelected() {
   const art = data.find((art) => art.slug === slug)
   if (!art) return <h1>Art not found</h1>
   
-  console.log(data,"jjgjgjgjgjgjg");
-  
   return (
     
 <main className={style.onePiece} >

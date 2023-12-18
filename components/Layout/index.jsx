@@ -4,6 +4,9 @@ import Navigation from '../Navigation'
 function Layout({ children }) {
   return (
   <>
+  
+
+
   <header>
   
     <Navigation />
