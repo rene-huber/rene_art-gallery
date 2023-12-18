@@ -24,13 +24,15 @@ export default function App({ Component, pageProps }) {
   if (!data) return <div>No data...</div>
 
   const cursorInnerStyle = {backgroundColor: !isDarkTheme ? 'black' : 'white',}
-  const cursorOuterStyle = {border: !isDarkTheme ? '1px solid black' : '1px solid white',}
+  const cursorOuterStyle = {backgroundColor: !isDarkTheme ? 'white' : 'white',
+  mixBlendMode: "difference",
+    border: !isDarkTheme ? '1px solid black' : '1px solid rgba(255, 255, 255, 0.1)',}
 
   return (
     <div className={isDarkTheme ? 'dark' : ''}>
 <AnimatedCursor
-  innerSize={8}
-  outerSize={27}
+  innerSize={9}
+  outerSize={23}
   innerScale={1}
   outerScale={2}
   outerAlpha={0}

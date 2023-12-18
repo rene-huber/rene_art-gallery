@@ -43,7 +43,7 @@ function Navigation() {
         className={styles.toggleButton}
         onClick={handleThemeDark}
       >
-        {!isDarkTheme ? <LightModeIcon style={{ color: 'black' }} /> : <DarkModeIcon style={{ color: 'grey' }} />}
+        {!isDarkTheme ? <LightModeIcon style={{ color: 'black' }} /> : <DarkModeIcon style={{ color: 'rgba(255,255,255,.9)' }} />}
       </button>
     </nav>
   );

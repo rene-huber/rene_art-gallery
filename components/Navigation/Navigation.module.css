@@ -5,6 +5,8 @@
   padding: 10px;
   background:transparent;
   backdrop-filter: blur(28px);
+  z-index: 3;
+  position:relative 
 }
 
 .navContainer.dark {
