@@ -4,6 +4,9 @@ import { persist } from 'zustand/middleware'
 const useStore = create(persist(
   (set) => ({
 
+    isDarkTheme: false,
+    toggleTheme: () => set(state => ({ isDarkTheme: !state.isDarkTheme })),
+  
     data: null,
     setData: (apiData) => set({ data: apiData }),
 

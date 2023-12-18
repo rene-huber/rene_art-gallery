@@ -1,0 +1,30 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  cursor: none;
+  margin: 0 ;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #fffff6;
+}
+
+.dark {
+  background-color: #5e5956;
+  color: #fff;
+}
+
+
+
+.buttonFav {
+  height: 200px; 
+  background: none;
+  border: none;
+}
+
+
+
