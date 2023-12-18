@@ -1,4 +1,5 @@
 import useStore from "@/store"
+
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
@@ -17,7 +18,7 @@ const FavoriteButton = ({ slug }) => {
    <>
  
    
-    <button onClick={handleFavorite}>
+    <button className="buttonFav" onClick={handleFavorite}>
      
       {isFavorited ?   <FavoriteIcon /> :  <FavoriteBorderIcon /> }
     </button>

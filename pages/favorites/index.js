@@ -8,7 +8,7 @@ const FavoritesPage = () => {
   const filteredFavoriteArtPieces = data.filter(artPiece => 
     artPiecesInfo[artPiece.slug] && artPiecesInfo[artPiece.slug].isFavorite
   );
-// console.log(filteredFavoriteArtPieces, "filteredFavoriteArtPieces")
+
   return (
     <div>
       <h1>Favorite Art Pieces</h1>
