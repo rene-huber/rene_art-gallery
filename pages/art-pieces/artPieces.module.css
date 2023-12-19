@@ -12,6 +12,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px; /* Espacio entre los elementos */
+    gap: 20px; 
   }
   

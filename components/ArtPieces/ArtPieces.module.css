@@ -3,12 +3,18 @@
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
-    padding: 0;
+    padding: 5% 9%;
   }
   
   .gridItem {
-    flex-basis: calc(33.333% - 20px); /* Ajuste para 3 columnas */
+    flex-basis: calc(33.333% - 20px); 
     display: flex;
     flex-direction: column;
+     
+    width: fit-content;
+    align-items: center;
+    padding: 25px 5px 5px 5px;
+    background-color: #ffffff46;
+    box-shadow: 3px 3px 11px rgba(0,0,0,.2);
   }
   
