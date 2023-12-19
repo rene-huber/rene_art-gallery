@@ -17,13 +17,14 @@ const FavoritesPage = () => {
     artPiecesInfo[artPiece.slug] && artPiecesInfo[artPiece.slug].isFavorite
   );
   
-  const key = filteredFavoriteArtPieces.slug
+
   
-  console.log(filteredFavoriteArtPieces, "5555555555555555555555");
+ 
 
   return (
     
     <div>
+         <h1>Favorite Art Pieces</h1>
  
        <AnimatePresence>
         <motion.div
@@ -37,7 +38,6 @@ const FavoritesPage = () => {
          
         </motion.div>
       </AnimatePresence>
-      <h1>Favorite Art Pieces</h1>
 
 
 

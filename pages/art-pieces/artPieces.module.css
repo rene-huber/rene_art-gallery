@@ -1,1 +1,17 @@
-.onePiece{background : transparent}
+.onePiece{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 13%;
+    padding: 20px;
+    border: 1px solid #242424;
+}
+
+.artPiecesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre los elementos */
+  }
+  

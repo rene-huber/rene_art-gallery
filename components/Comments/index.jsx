@@ -11,7 +11,7 @@ function Comments({ slug }) {
           <small>Date: {comment.date}</small>
           <small>Hour: {comment.time}</small>
         </div>
-      )) : <p>No comments</p>}
+      )) : ""}
     </div>
   );
 }

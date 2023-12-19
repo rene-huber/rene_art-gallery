@@ -1,0 +1,14 @@
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .gridItem {
+    flex-basis: calc(33.333% - 20px); /* Ajuste para 3 columnas */
+    display: flex;
+    flex-direction: column;
+  }
+  
