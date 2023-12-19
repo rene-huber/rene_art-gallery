@@ -1,0 +1,46 @@
+
+.home {
+    color: white;
+   height:97vh;
+    width: 100vw;
+    display: flex;
+  flex-direction: column; /* align items vertically */
+  justify-content:flex-start ; /* center items vertically */
+  align-items: flex-start;
+    margin: 0;
+    padding: 13% 78px 0 78px;
+    overflow: hidden!important;
+    background: url("../assets/splash2.jpg") no-repeat 105% 65%;
+    background-size: 72%;
+    box-sizing: border-box;
+}
+    
+.home h1 {
+    font-size: 95px;
+    line-height: 79px;
+    /* height: auto; */
+    height: 248px;
+    overflow: hidden;   
+}
+    
+
+
+.parrafo{
+color: black;
+width: 35vw;
+max-width: 600px;
+}
+
+
+@media (max-width: 1356px) {
+    .home h1 {
+        font-size: 75px;
+        line-height: 63px;
+        height: 218px;
+    }
+
+    .home {
+        padding: 9% 78px 0 78px;
+    }
+
+}
