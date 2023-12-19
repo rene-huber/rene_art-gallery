@@ -4,6 +4,7 @@ import FavoriteButton from "../FavoriteButton"
 import CommentForm from "../CommentForm";
 
 
+
 function ArtPieceDetail({ image, title, artist, year, genre, slug }) {
   const router = useRouter()
   return (
@@ -11,10 +12,11 @@ function ArtPieceDetail({ image, title, artist, year, genre, slug }) {
       <div>
         <Image src={image} width={500} height={500} alt={artist} />
 
-        <h2>{artist}</h2>
-        <h2>{title}</h2>
-        <h2>{year}</h2>
-        <h2>{genre}</h2>
+        <h1>{title}</h1>
+        <h4>{artist}</h4>
+
+        <h4>Year:<span style={{color:"grey"}}>{year}</span></h4>
+        <h4>Genre: <span style={{color:"grey"}}>{genre}</span></h4>
 
         <button onClick={()=> {router.back()}}>Back</button>
 

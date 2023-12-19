@@ -19,7 +19,7 @@ function Navigation() {
     <nav className={`${styles.navContainer} ${isDarkTheme ? styles.dark : ''}`}>
 
 
-      <div className={styles.logo}> <Link href="/">  Art Gallery</Link>
+      <div className={`${styles.logo} ${isDarkTheme ? styles.dark : ''}`}> <Link href="/"> Art Gallery</Link>
       </div>
       <button
         className={styles.hamburger}
@@ -43,7 +43,7 @@ function Navigation() {
         className={styles.toggleButton}
         onClick={handleThemeDark}
       >
-        {!isDarkTheme ? <LightModeIcon style={{ color: 'black' }} /> : <DarkModeIcon style={{ color: 'rgba(255,255,255,.9)' }} />}
+        {!isDarkTheme ? <LightModeIcon style={{ color: '#black' }} /> : <DarkModeIcon style={{ color: 'rgba(255,255,255,.9)' }} />}
       </button>
     </nav>
   );
