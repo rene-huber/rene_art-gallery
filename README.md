@@ -8,5 +8,5 @@
 
 
 
-This project was created from the Spiced Academy `next` template.
+
 
